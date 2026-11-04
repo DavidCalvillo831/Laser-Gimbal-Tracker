@@ -39,12 +39,3 @@ First working version of the tracker. The laptop webcam finds your hand, and an 
 | `MANUAL_EXPOSURE` | Forces a short exposure so the webcam doesn't slow down in dim light |
 | `USE_DIRECTSHOW` | Switches the Windows camera driver; some webcams are faster on one |
 
-## What I learned
-
-- **Servo jitter** came from whole-degree steps and powering servos from the Arduino's 5V pin. Fixed with microsecond pulses and a separate buck supply.
-- **Erratic servo motion** was a missing shared ground between the buck and the Arduino.
-- **Frame rate** is capped at about 20 FPS by the laptop webcam, not the code. Prediction covers some of that lag; the dedicated XIAO camera is the next step.
-
-## Next
-
-Replace the laptop webcam with the XIAO ESP32-S3 camera stream, then move to the onboard build.
